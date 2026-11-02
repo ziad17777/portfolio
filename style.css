@@ -1022,9 +1022,8 @@ html{
 .fitemail {
   display: block;
   font-size: 14px;
-  font-weight: 300;
-  font-family: 'Inter', 'Open Sans', 'Roboto', sans-serif;
-  color: red;                  /* 🔴 makes the text red */
+  font-weight: 500;
+  color: #3a6cf4;
   text-align: center;
   word-break: break-all;
   line-height: 1.4;
@@ -1032,8 +1031,83 @@ html{
   transition: color 0.3s ease;
 }
 
-.email:hover {
-  color: darkred;              /* darker red on hover */
+.fitemail:hover {
+  color: #235bf6;
+}
+
+/* Riyadh Availability Badge */
+.badge-riyadh {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #34d399;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse 1.8s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.btn-cv {
+  background: transparent !important;
+  border: 2px solid #3a6cf4 !important;
+  color: #fff !important;
+  margin-left: 15px;
+}
+.btn-cv:hover {
+  background: #3a6cf4 !important;
+  color: #fff !important;
+}
+
+/* Project Action Buttons */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #f1f5f9;
+}
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.project-btn.primary {
+  background: #3a6cf4;
+  color: #fff;
+}
+.project-btn.primary:hover {
+  background: #2554d7;
+}
+.project-btn.secondary {
+  background: #0f172a;
+  color: #fff;
+}
+.project-btn.secondary:hover {
+  background: #1e293b;
 }
 
 
