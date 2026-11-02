@@ -215,7 +215,18 @@ body{
 .about .content .col-left .img-card{
   position: relative;
   width: 100%;
-  min-height: 450px;
+  min-height: 480px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(58, 108, 244, 0.25), 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(58, 108, 244, 0.4);
+  transition: all 0.4s ease;
+}
+
+.about .content .col-left .img-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(58, 108, 244, 0.35);
+  border-color: #3a6cf4;
 }
 
 .about .content .col-left .img-card img{
@@ -225,7 +236,13 @@ body{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  object-position: top center;
+  border-radius: 14px;
+  transition: transform 0.5s ease;
+}
+
+.about .content .col-left .img-card:hover img{
+  transform: scale(1.02);
 }
 
 .about .content .col-right .content-title{
