@@ -3,360 +3,906 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ziad El Sayed — AI & Software Engineer</title>
-  <meta name="description" content="Personal website of Ziad El Sayed, AI & Software Engineer based in Riyadh, Saudi Arabia. Building RAG pipelines, ML systems, and data infrastructure.">
+  <title>Ziad El Sayed | AI & Software Engineer — Riyadh, Saudi Arabia</title>
+  <meta name="description" content="Portfolio of Ziad El Sayed, AI & Software Engineer based in Riyadh, Saudi Arabia. Specializing in Bilingual RAG (Arabic & English), LLaMA 3.3, FastAPI, and Data Engineering pipelines.">
+  <meta name="keywords" content="Ziad El Sayed, AI Engineer, Machine Learning, RAG, Riyadh, Saudi Arabia, Python, FastAPI, Airflow">
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="wrapper">
-    
-    <!-- Minimalist Top Navigation -->
-    <header class="site-header">
-      <div class="header-left">
-        <a href="/" class="brand-link">
-          <span class="avatar-mini">
-            <img src="images/img1.jpg" alt="Ziad El Sayed">
-          </span>
-          <span class="brand-name">Ziad El Sayed</span>
-        </a>
-        <span class="location-tag">
-          <span class="status-dot"></span>
-          Riyadh, KSA
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Sticky Modern Navigation Header -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-avatar">
+          <img src="images/img1.jpg" alt="Ziad El Sayed">
         </span>
-      </div>
+        <span class="brand-text">Ziad El Sayed</span>
+      </a>
 
-      <nav class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="Ziad_El_Sayed_AI_Engineer_CV.pdf" download class="resume-pill">CV (PDF)</a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
-    </header>
 
-    <!-- Human Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <h1 class="hero-title">
-          Software & AI Engineer building practical machine learning systems.
-        </h1>
-        
-        <p class="hero-bio">
-          Hey, I'm <strong>Ziad</strong>. I'm a Computer Science graduate based in <strong>Riyadh, Saudi Arabia</strong>. 
-          I focus on building production bilingual RAG pipelines (Arabic & English), fine-tuning local LLM workflows, 
-          and designing automated data pipelines using Python, FastAPI, and Apache Airflow.
-        </p>
-
-        <p class="hero-subbio">
-          Previously, I taught programming and mentored 150+ students at <strong>Udacity</strong> and <strong>El Mentor</strong>. 
-          Currently looking for junior / associate AI Engineer, Backend, or Data Engineer roles in Riyadh (available for immediate in-person start).
-        </p>
-
-        <div class="hero-actions">
-          <a href="https://wa.me/966501885047" target="_blank" class="btn btn-primary">
-            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-          </a>
-          <a href="mailto:ziadelsayed177@gmail.com" class="btn btn-secondary">
-            <i class="fas fa-envelope"></i> Send Email
-          </a>
-          <a href="Ziad_El_Sayed_AI_Engineer_CV.pdf" download class="btn btn-secondary">
-            <i class="fas fa-file-arrow-down"></i> Resume
-          </a>
-          <a href="https://github.com/ziad17777" target="_blank" class="btn btn-ghost" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/ziad-sayed-652365320/" target="_blank" class="btn btn-ghost" title="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
+      <div class="nav-actions">
+        <a href="Ziad_El_Sayed_AI_Engineer_CV.pdf" download class="btn-cv">
+          <i class="fas fa-file-pdf"></i>
+          <span>CV (PDF)</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-    </section>
+    </div>
+  </header>
 
-    <!-- Selected Projects Section -->
-    <section class="content-section" id="projects">
-      <div class="section-title-wrap">
-        <h2 class="section-heading">Selected Projects</h2>
-        <span class="section-subheading">A few things I've built and open-sourced.</span>
-      </div>
-
-      <div class="projects-list">
-        
-        <!-- Project 1 -->
-        <div class="project-entry">
-          <div class="project-main">
-            <div class="project-top-line">
-              <h3 class="project-name">
-                <a href="https://github.com/ziad17777/EDUPlan" target="_blank">
-                  Phoenix EduPlan ↗
-                </a>
-              </h3>
-              <span class="project-year">2025</span>
-            </div>
-            <p class="project-desc">
-              A bilingual AI study platform that answers questions over uploaded curriculum documents in Arabic and English. 
-              I built a hybrid retrieval engine combining dense vector search (FAISS) with lexical keyword matching (BM25) and LLaMA 3.3 to stop hallucination and retrieve accurate citations. Backend microservices built in Django REST and FastAPI with user session isolation.
-            </p>
-            <div class="project-tags">
-              <span>Bilingual RAG</span>
-              <span>LLaMA 3.3</span>
-              <span>FAISS + BM25</span>
-              <span>FastAPI</span>
-              <span>Django REST</span>
-              <span>React</span>
-            </div>
-          </div>
-          <div class="project-link-action">
-            <a href="https://github.com/ziad17777/EDUPlan" target="_blank" class="text-link">
-              <i class="fab fa-github"></i> Source Code
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-entry">
-          <div class="project-main">
-            <div class="project-top-line">
-              <h3 class="project-name">
-                <a href="https://github.com/ziad17777/real-time-iot-data-pipeline" target="_blank">
-                  Real-Time IoT Data Pipeline ↗
-                </a>
-              </h3>
-              <span class="project-year">2024</span>
-            </div>
-            <p class="project-desc">
-              An automated streaming data ingestion and transformation pipeline for sensor telemetry. Scheduled and monitored using Apache Airflow DAGs, validating data quality, and warehousing metrics in SQL Server and SQLite schemas.
-            </p>
-            <div class="project-tags">
-              <span>Apache Airflow</span>
-              <span>SQL Server</span>
-              <span>ETL Pipelines</span>
-              <span>Docker</span>
-              <span>Pandas</span>
-            </div>
-          </div>
-          <div class="project-link-action">
-            <a href="https://github.com/ziad17777/real-time-iot-data-pipeline" target="_blank" class="text-link">
-              <i class="fab fa-github"></i> Source Code
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-entry">
-          <div class="project-main">
-            <div class="project-top-line">
-              <h3 class="project-name">
-                <a href="https://github.com/ziad17777" target="_blank">
-                  Health-Fact ↗
-                </a>
-              </h3>
-              <span class="project-year">2024</span>
-            </div>
-            <p class="project-desc">
-              Collaborated on an embedded machine learning pipeline analyzing real-time biometric sensor streams. Preprocessed raw telemetry and trained scikit-learn classification models to detect anomalous blood pressure and glucose spikes.
-            </p>
-            <div class="project-tags">
-              <span>Embedded ML</span>
-              <span>scikit-learn</span>
-              <span>Sensor Streams</span>
-              <span>Python</span>
-            </div>
-          </div>
-          <div class="project-link-action">
-            <a href="https://github.com/ziad17777" target="_blank" class="text-link">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-entry">
-          <div class="project-main">
-            <div class="project-top-line">
-              <h3 class="project-name">
-                <a href="https://github.com/ziad17777" target="_blank">
-                  PowerPulse — Grid Energy Forecasting ↗
-                </a>
-              </h3>
-              <span class="project-year">2024</span>
-            </div>
-            <p class="project-desc">
-              A deep learning time-series predictive model to forecast power consumption across multi-zone regional electrical distribution grids using weather features and historical load telemetry.
-            </p>
-            <div class="project-tags">
-              <span>Deep Learning</span>
-              <span>Time Series</span>
-              <span>Pandas / NumPy</span>
-              <span>scikit-learn</span>
-            </div>
-          </div>
-          <div class="project-link-action">
-            <a href="https://github.com/ziad17777" target="_blank" class="text-link">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Work Experience & Teaching -->
-    <section class="content-section" id="experience">
-      <div class="section-title-wrap">
-        <h2 class="section-heading">Work & Teaching Experience</h2>
-        <span class="section-subheading">Teaching others is the best way to master fundamentals.</span>
-      </div>
-
-      <div class="experience-list">
-        
-        <div class="experience-item">
-          <div class="exp-header">
-            <div class="exp-title-row">
-              <span class="exp-role">Programming Instructor & Mentor</span>
-              <span class="exp-company">Udacity</span>
-            </div>
-            <span class="exp-date">2023 — Present</span>
-          </div>
-          <p class="exp-summary">
-            Mentoring software engineering students through Python fundamentals, data structures, and object-oriented design. Conducting code reviews, explaining algorithmic complexity, and helping students debug production issues.
-          </p>
-        </div>
-
-        <div class="experience-item">
-          <div class="exp-header">
-            <div class="exp-title-row">
-              <span class="exp-role">Technical Instructor</span>
-              <span class="exp-company">El Mentor</span>
-            </div>
-            <span class="exp-date">2023 — Present</span>
-          </div>
-          <p class="exp-summary">
-            Designed hands-on curriculum teaching Python, problem-solving, and introductory data science to young developers. Led live workshops building terminal apps, web scrapers, and collaborative Git workflows.
-          </p>
-        </div>
-
-        <div class="experience-item">
-          <div class="exp-header">
-            <div class="exp-title-row">
-              <span class="exp-role">Data Engineering Track Fellow</span>
-              <span class="exp-company">Digital Egypt Pioneers Initiative (DEPI)</span>
-            </div>
-            <span class="exp-date">2024</span>
-          </div>
-          <p class="exp-summary">
-            Intensive program covering enterprise relational database design, Apache Airflow workflow orchestration, SQL Server data warehouse modeling, and building resilient ETL pipelines.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Technical Skills (Clean & Direct) -->
-    <section class="content-section" id="skills">
-      <div class="section-title-wrap">
-        <h2 class="section-heading">Technical Stack</h2>
-        <span class="section-subheading">Tools and technologies I use daily.</span>
-      </div>
-
-      <div class="skills-clean-grid">
-        <div class="skill-group">
-          <h4 class="skill-group-title">AI & Language Models</h4>
-          <p class="skill-group-items">RAG Architectures, FAISS (Vector Search), BM25 (Lexical Ranking), LLaMA 3.3, Hugging Face Transformers, Prompt Engineering, Evaluation.</p>
-        </div>
-
-        <div class="skill-group">
-          <h4 class="skill-group-title">Data Engineering</h4>
-          <p class="skill-group-items">Apache Airflow, SQL Server, PostgreSQL, SQLite, ETL Pipelines, Relational Modeling, Schema Validation, Data Cleaning.</p>
-        </div>
-
-        <div class="skill-group">
-          <h4 class="skill-group-title">Backend & Systems</h4>
-          <p class="skill-group-items">Python 3.x, FastAPI, Django REST Framework, Docker, REST APIs, Session Caching, Linux, Git / GitHub Workflows.</p>
-        </div>
-
-        <div class="skill-group">
-          <h4 class="skill-group-title">Machine Learning & Web</h4>
-          <p class="skill-group-items">scikit-learn, Pandas, NumPy, Time-Series Modeling, React, Vite, Modern JavaScript, Azure Cognitive Services.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Me & Education -->
-    <section class="content-section" id="about">
-      <div class="section-title-wrap">
-        <h2 class="section-heading">About & Education</h2>
-      </div>
-
-      <div class="about-flex">
-        <div class="about-photo-card">
-          <img src="images/img1.jpg" alt="Ziad El Sayed in suit">
-          <div class="photo-badge">
-            <span class="status-dot"></span>
-            <span>Riyadh Physical</span>
-          </div>
-        </div>
-
-        <div class="about-text-content">
-          <p>
-            I graduated with a <strong>Bachelor of Computer Science</strong> from <strong>Teba Academy of Science (Graduated 2024, GPA: 2.85 / 4.0, Grade: B)</strong>. 
-          </p>
-          <p>
-            Rather than staying theoretical, I spent my university years building real applications: from embedding models into medical sensors to engineering a full bilingual RAG platform deployed on Hugging Face Spaces.
-          </p>
-          <p>
-            I am currently in <strong>Riyadh, Saudi Arabia</strong> and can start immediately on-site or remotely. I'm excited to join an engineering team building data-intensive products, LLM applications, or scalable backend services.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Direct Contact Section -->
-    <section class="content-section contact-section" id="contact">
-      <div class="contact-card-simple">
-        <h2 class="contact-title">Let's talk.</h2>
-        <p class="contact-intro">
-          I'm actively interviewing for AI Engineer, Backend, and Data roles in Riyadh. If you have an open position or just want to chat about RAG pipelines, feel free to reach out.
-        </p>
-
-        <div class="contact-direct-links">
-          <a href="https://wa.me/966501885047" target="_blank" class="contact-channel">
-            <span class="channel-label">WhatsApp</span>
-            <span class="channel-val">+966 50 188 5047 ↗</span>
-          </a>
-
-          <a href="mailto:ziadelsayed177@gmail.com" class="contact-channel">
-            <span class="channel-label">Email</span>
-            <span class="channel-val">ziadelsayed177@gmail.com ↗</span>
-          </a>
-
-          <a href="https://www.linkedin.com/in/ziad-sayed-652365320/" target="_blank" class="contact-channel">
-            <span class="channel-label">LinkedIn</span>
-            <span class="channel-val">ziad-sayed ↗</span>
-          </a>
-
-          <a href="https://github.com/ziad17777" target="_blank" class="contact-channel">
-            <span class="channel-label">GitHub</span>
-            <span class="channel-val">ziad17777 ↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Minimal Footer -->
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <span>© 2026 Ziad El Sayed</span>
-        <span>Riyadh, Saudi Arabia</span>
-      </div>
-    </footer>
-
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#hero" class="mobile-nav-link">Home</a>
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#education" class="mobile-nav-link">Education</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <a href="Ziad_El_Sayed_AI_Engineer_CV.pdf" download class="mobile-nav-link mobile-cv-link">
+      <i class="fas fa-download"></i> Download CV (PDF)
+    </a>
   </div>
 
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-backdrop"></div>
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <!-- Live Status Badge -->
+          <div class="status-pill">
+            <span class="status-beacon">
+              <span class="beacon-ping"></span>
+              <span class="beacon-dot"></span>
+            </span>
+            <span>Based in Riyadh, Saudi Arabia · Available Immediately</span>
+          </div>
+
+          <h1 class="hero-greeting">
+            Hello, I'm <br>
+            <span class="hero-name-gradient">Ziad El Sayed</span>
+          </h1>
+
+          <!-- Dynamic Animated Typing/Flip Roles -->
+          <div class="role-flipper-container">
+            <span class="role-prefix">I am an </span>
+            <div class="role-flipper">
+              <span class="role-text">AI & Machine Learning Engineer</span>
+              <span class="role-text">Bilingual RAG Specialist</span>
+              <span class="role-text">Data Pipeline Engineer</span>
+            </div>
+          </div>
+
+          <p class="hero-description">
+            Computer Science graduate specializing in production <strong>Bilingual RAG architectures (Arabic & English)</strong>, 
+            local LLM pipelines (LLaMA 3.3), and resilient data infrastructure using <strong>Python, FastAPI, and Apache Airflow</strong>.
+            Mentored 150+ students in software engineering. Ready for on-site roles in Riyadh.
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-layer-group"></i>
+              <span>Explore Projects</span>
+            </a>
+            <a href="https://wa.me/966501885047" target="_blank" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp Chat</span>
+            </a>
+            <a href="Ziad_El_Sayed_AI_Engineer_CV.pdf" download class="btn btn-outline">
+              <i class="fas fa-file-arrow-down"></i>
+              <span>Resume (PDF)</span>
+            </a>
+          </div>
+
+          <!-- Hero Social Media Icons -->
+          <div class="hero-social-strip">
+            <span class="social-label">Connect:</span>
+            <div class="social-links">
+              <a href="https://wa.me/966501885047" target="_blank" class="social-circle" title="WhatsApp (+966 50 188 5047)">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/ziad-sayed-652365320/" target="_blank" class="social-circle" title="LinkedIn Profile">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/ziad17777" target="_blank" class="social-circle" title="GitHub Profile">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:ziadelsayed177@gmail.com" class="social-circle" title="Email Ziad">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="tel:+966501885047" class="social-circle" title="Call Ziad (+966 50 188 5047)">
+                <i class="fas fa-phone"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Stats Box -->
+        <div class="hero-metric-sidebar">
+          <div class="metric-card">
+            <div class="metric-num">150+</div>
+            <div class="metric-title">Students Mentored</div>
+            <div class="metric-sub">Udacity & El Mentor</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">2.85</div>
+            <div class="metric-title">CS Degree GPA (Grade B)</div>
+            <div class="metric-sub">Teba Academy of Science</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">4+</div>
+            <div class="metric-title">Production Systems</div>
+            <div class="metric-sub">RAG, Airflow, ML, IoT</div>
+          </div>
+          <div class="metric-card highlight-metric">
+            <div class="metric-num"><i class="fas fa-map-pin"></i> Riyadh</div>
+            <div class="metric-title">Physical Presence</div>
+            <div class="metric-sub">Immediate Start Available</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About Me Section with PROMINENT, LARGE PORTRAIT -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Executive Profile</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- LEFT COLUMN: LARGE, CRISP, PROMINENT PORTRAIT CARD -->
+          <div class="about-photo-wrapper reveal">
+            <div class="portrait-card">
+              <div class="portrait-image-container">
+                <img src="images/img1.jpg" alt="Ziad El Sayed - AI & Software Engineer" class="portrait-img">
+                <div class="portrait-gradient-overlay"></div>
+                <div class="portrait-floating-tag">
+                  <span class="tag-pulse"></span>
+                  <div class="tag-text">
+                    <span class="tag-title">Ziad El Sayed</span>
+                    <span class="tag-role">AI & Software Engineer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="portrait-footer">
+                <div class="p-foot-item">
+                  <i class="fas fa-location-dot"></i>
+                  <span>Riyadh, Saudi Arabia</span>
+                </div>
+                <div class="p-foot-item">
+                  <i class="fas fa-bolt"></i>
+                  <span>Immediate Start</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: COMPELLING BIO & CREDENTIALS -->
+          <div class="about-bio-wrapper reveal">
+            <h3 class="about-greeting">
+              Hey there! I'm <span class="highlight-blue">Ziad El Sayed</span>
+            </h3>
+
+            <p class="bio-lead">
+              A Computer Science graduate from <strong>Teba Academy of Science (Graduated 2024, GPA: 2.85 / 4.0, Grade: B)</strong> 
+              who turns state-of-the-art AI research into reliable, scalable software.
+            </p>
+
+            <p class="bio-body">
+              Instead of sticking to theory, I've spent my engineering journey building production systems: 
+              from architecting <strong>Phoenix EduPlan</strong> (a bilingual Arabic/English RAG platform combining FAISS vector search, BM25 hybrid ranking, and LLaMA 3.3) 
+              to engineering automated <strong>Airflow ETL telemetry pipelines</strong> and embedded ML health classification models.
+            </p>
+
+            <p class="bio-body">
+              As an instructor at <strong>Udacity</strong> and <strong>El Mentor</strong>, I have mentored over <strong>150+ students</strong> 
+              in Python, algorithms, and clean software architecture — strengthening my ability to communicate complex engineering concepts clearly and collaborate across teams.
+            </p>
+
+            <!-- Key Fact Quick-Grid -->
+            <div class="about-facts-grid">
+              <div class="fact-item">
+                <span class="fact-label"><i class="fas fa-graduation-cap"></i> Degree:</span>
+                <span class="fact-value">B.Sc. Computer Science (2024)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label"><i class="fas fa-star"></i> GPA:</span>
+                <span class="fact-value">2.85 / 4.0 (Grade: B)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label"><i class="fas fa-map-marker-alt"></i> Location:</span>
+                <span class="fact-value">Riyadh, KSA (Ready On-Site)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label"><i class="fab fa-whatsapp"></i> Phone:</span>
+                <span class="fact-value"><a href="https://wa.me/966501885047">+966 50 188 5047</a></span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label"><i class="fas fa-envelope"></i> Email:</span>
+                <span class="fact-value"><a href="mailto:ziadelsayed177@gmail.com">ziadelsayed177@gmail.com</a></span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label"><i class="fab fa-github"></i> GitHub:</span>
+                <span class="fact-value"><a href="https://github.com/ziad17777" target="_blank">github.com/ziad17777</a></span>
+              </div>
+            </div>
+
+            <div class="about-action-row">
+              <a href="https://wa.me/966501885047" target="_blank" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp Me (+966 50 188 5047)
+              </a>
+              <a href="Ziad_El_Sayed_AI_Engineer_CV.pdf" download class="btn btn-primary">
+                <i class="fas fa-file-pdf"></i> Download Full CV
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills Section: Visual Bars + Categorized Badges -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">My Skills & Technical Stack</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">A balanced toolkit combining high-level AI research with solid backend and data engineering foundations.</p>
+        </div>
+
+        <div class="skills-layout-grid">
+          
+          <!-- LEFT: VISUAL PROFICIENCY BARS (Rich visual feel) -->
+          <div class="skills-card-container reveal">
+            <h3 class="skills-group-title">
+              <i class="fas fa-sliders-h"></i> Core Technical Proficiencies
+            </h3>
+
+            <div class="skill-bar-item">
+              <div class="bar-header">
+                <span class="bar-label"><i class="fab fa-python skill-icon-python"></i> Python & Async Architecture</span>
+                <span class="bar-percent">92%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: 92%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="bar-header">
+                <span class="bar-label"><i class="fas fa-brain skill-icon-ai"></i> Bilingual RAG & LLMs (LLaMA 3.3)</span>
+                <span class="bar-percent">88%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: 88%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="bar-header">
+                <span class="bar-label"><i class="fas fa-server skill-icon-backend"></i> FastAPI & RESTful Microservices</span>
+                <span class="bar-percent">88%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: 88%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="bar-header">
+                <span class="bar-label"><i class="fas fa-database skill-icon-db"></i> SQL Server, Airflow & Data Pipelines</span>
+                <span class="bar-percent">85%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: 85%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="bar-header">
+                <span class="bar-label"><i class="fas fa-chart-line skill-icon-ml"></i> Machine Learning & Analytics (scikit-learn)</span>
+                <span class="bar-percent">82%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: 82%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="bar-header">
+                <span class="bar-label"><i class="fab fa-js skill-icon-js"></i> Modern JavaScript & Frontend Integration</span>
+                <span class="bar-percent">80%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: 80%;"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: CATEGORIZED TECH DOMAINS & SOFT SKILLS -->
+          <div class="skills-categories-container reveal">
+            
+            <div class="tech-category-card">
+              <div class="cat-header">
+                <i class="fas fa-robot cat-icon"></i>
+                <h4>AI & Language Models</h4>
+              </div>
+              <div class="cat-tags">
+                <span class="tag">Bilingual RAG</span>
+                <span class="tag">FAISS Vector Search</span>
+                <span class="tag">BM25 Ranking</span>
+                <span class="tag">LLaMA 3.3</span>
+                <span class="tag">Hugging Face</span>
+                <span class="tag">Prompt Engineering</span>
+                <span class="tag">Text Summarization</span>
+              </div>
+            </div>
+
+            <div class="tech-category-card">
+              <div class="cat-header">
+                <i class="fas fa-database cat-icon"></i>
+                <h4>Data Engineering & Storage</h4>
+              </div>
+              <div class="cat-tags">
+                <span class="tag">Apache Airflow</span>
+                <span class="tag">SQL Server</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">ETL Pipelines</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">NumPy</span>
+                <span class="tag">Data Cleaning</span>
+              </div>
+            </div>
+
+            <div class="tech-category-card">
+              <div class="cat-header">
+                <i class="fas fa-network-wired cat-icon"></i>
+                <h4>Backend, Systems & DevOps</h4>
+              </div>
+              <div class="cat-tags">
+                <span class="tag">FastAPI</span>
+                <span class="tag">Django REST</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Git / GitHub</span>
+                <span class="tag">Linux</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">Cisco Networking</span>
+              </div>
+            </div>
+
+            <div class="tech-category-card">
+              <div class="cat-header">
+                <i class="fas fa-users cat-icon"></i>
+                <h4>Mentorship & Professional Skills</h4>
+              </div>
+              <div class="cat-tags">
+                <span class="tag highlight-tag">150+ Students Taught</span>
+                <span class="tag">Technical Mentorship</span>
+                <span class="tag">Problem Solving</span>
+                <span class="tag">Agile Teamwork</span>
+                <span class="tag">Code Review</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Career History</span>
+          <h2 class="section-title">Work & Mentorship Experience</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">Teaching and mentoring junior engineers while shipping robust production software.</p>
+        </div>
+
+        <div class="timeline-container">
+          
+          <!-- Experience 1: Udacity -->
+          <div class="timeline-card reveal">
+            <div class="card-left-badge">
+              <span class="exp-year">2023 — Present</span>
+              <span class="exp-type">Instructor</span>
+            </div>
+            <div class="card-content">
+              <div class="exp-header-top">
+                <h3 class="exp-role">Programming Instructor & Mentor</h3>
+                <span class="exp-company-badge">Udacity</span>
+              </div>
+              <p class="exp-description">
+                Mentoring aspiring software engineers through Python fundamentals, data structures, and object-oriented architecture.
+              </p>
+              <ul class="exp-bullets">
+                <li><i class="fas fa-check-circle"></i> Conducted code reviews and architectural walkthroughs for hundreds of student projects.</li>
+                <li><i class="fas fa-check-circle"></i> Mentored students in debugging production runtime issues, memory optimization, and algorithmic efficiency.</li>
+                <li><i class="fas fa-check-circle"></i> Guided learners through real-world software engineering workflows and Git version control best practices.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 2: El Mentor -->
+          <div class="timeline-card reveal">
+            <div class="card-left-badge">
+              <span class="exp-year">2023 — Present</span>
+              <span class="exp-type">Instructor</span>
+            </div>
+            <div class="card-content">
+              <div class="exp-header-top">
+                <h3 class="exp-role">Technical Instructor</h3>
+                <span class="exp-company-badge">El Mentor</span>
+              </div>
+              <p class="exp-description">
+                Designed and led hands-on computer science bootcamps for young adults, building practical coding habits.
+              </p>
+              <ul class="exp-bullets">
+                <li><i class="fas fa-check-circle"></i> Delivered live coding sessions covering Python syntax, loops, OOP, and introductory data science.</li>
+                <li><i class="fas fa-check-circle"></i> Fostered collaborative problem-solving, communication skills, and project-based teamwork among 150+ students.</li>
+                <li><i class="fas fa-check-circle"></i> Created reusable curriculum modules, coding challenges, and capstone project assignments.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 3: DEPI Data Engineering -->
+          <div class="timeline-card reveal">
+            <div class="card-left-badge">
+              <span class="exp-year">2024</span>
+              <span class="exp-type">Fellowship</span>
+            </div>
+            <div class="card-content">
+              <div class="exp-header-top">
+                <h3 class="exp-role">Data Engineering Track Fellow</h3>
+                <span class="exp-company-badge">Digital Egypt Pioneers Initiative (DEPI)</span>
+              </div>
+              <p class="exp-description">
+                Intensive industry fellowship focused on end-to-end enterprise data engineering and analytics pipelines.
+              </p>
+              <ul class="exp-bullets">
+                <li><i class="fas fa-check-circle"></i> Orchestrated complex data workflows using Apache Airflow DAGs with scheduled error handling.</li>
+                <li><i class="fas fa-check-circle"></i> Designed relational database schemas in SQL Server and implemented automated ETL pipelines.</li>
+                <li><i class="fas fa-check-circle"></i> Built automated schema validation and data quality testing pipelines for analytical reporting.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Academic Credentials</span>
+          <h2 class="section-title">Education & Certifications</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="education-grid">
+          
+          <!-- Primary Degree Card -->
+          <div class="education-card reveal">
+            <div class="edu-top-row">
+              <div class="edu-icon-box">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <div class="edu-title-group">
+                <h3 class="edu-degree">Bachelor of Computer Science</h3>
+                <span class="edu-school">Teba Academy of Science</span>
+              </div>
+              <div class="edu-gpa-badge">
+                <span class="gpa-score">GPA: 2.85 / 4.0</span>
+                <span class="gpa-grade">Grade: B</span>
+              </div>
+            </div>
+
+            <div class="edu-body">
+              <p class="edu-timeline"><i class="fas fa-calendar-alt"></i> Class of 2024</p>
+              <p class="edu-text">
+                Comprehensive four-year computer science curriculum with strong emphasis on algorithmic foundations,
+                relational database modeling, system design, and software engineering.
+              </p>
+              <div class="coursework-tags">
+                <span class="c-tag">Data Structures</span>
+                <span class="c-tag">Algorithms</span>
+                <span class="c-tag">Database Management</span>
+                <span class="c-tag">Software Engineering</span>
+                <span class="c-tag">Computer Networks</span>
+                <span class="c-tag">Operating Systems</span>
+                <span class="c-tag">AI & Machine Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Certifications Card -->
+          <div class="certifications-card reveal">
+            <div class="cert-header">
+              <div class="edu-icon-box">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h3 class="cert-title">Verified Certifications</h3>
+            </div>
+
+            <div class="cert-list">
+              <div class="cert-item">
+                <div class="cert-bullet"><i class="fas fa-check"></i></div>
+                <div class="cert-details">
+                  <h4>DEPI Data Engineering Track</h4>
+                  <span>Ministry of Communications & Information Technology</span>
+                </div>
+              </div>
+
+              <div class="cert-item">
+                <div class="cert-bullet"><i class="fas fa-check"></i></div>
+                <div class="cert-details">
+                  <h4>Cisco Networking Academy</h4>
+                  <span>Routing, Switching & Network Infrastructure</span>
+                </div>
+              </div>
+
+              <div class="cert-item">
+                <div class="cert-bullet"><i class="fas fa-check"></i></div>
+                <div class="cert-details">
+                  <h4>Python Programming Certification</h4>
+                  <span>Advanced Python & Object-Oriented Software</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Featured Engineering</span>
+          <h2 class="section-title">Production & Open-Source Projects</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">Real code solving real problems. Architected for accuracy, speed, and real-world deployment.</p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1: Phoenix EduPlan -->
+          <div class="project-showcase-card reveal">
+            <div class="p-card-header">
+              <div class="p-badge-row">
+                <span class="p-flagship">Flagship AI Project</span>
+                <span class="p-year">2025</span>
+              </div>
+              <h3 class="p-title">
+                <a href="https://github.com/ziad17777/EDUPlan" target="_blank">Phoenix EduPlan</a>
+              </h3>
+              <p class="p-tagline">Bilingual AI Academic Assistant with Hybrid RAG & LLaMA 3.3</p>
+            </div>
+
+            <div class="p-card-body">
+              <p class="p-desc">
+                An enterprise-grade bilingual study platform that indexes curriculum documents and answers questions accurately in Arabic and English. 
+                Built with a hybrid retrieval pipeline combining <strong>FAISS dense vector embeddings</strong> with <strong>BM25 lexical search</strong> to eliminate hallucinations, 
+                plus an intelligent summarization engine and user session persistence.
+              </p>
+
+              <div class="p-tech-stack">
+                <span class="stack-chip">Bilingual RAG</span>
+                <span class="stack-chip">LLaMA 3.3</span>
+                <span class="stack-chip">FAISS</span>
+                <span class="stack-chip">BM25</span>
+                <span class="stack-chip">FastAPI</span>
+                <span class="stack-chip">Django REST</span>
+              </div>
+            </div>
+
+            <div class="p-card-actions">
+              <a href="https://github.com/ziad17777/EDUPlan" target="_blank" class="p-btn-code">
+                <i class="fab fa-github"></i>
+                <span>Explore Source Code ↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: Real-Time IoT Data Pipeline -->
+          <div class="project-showcase-card reveal">
+            <div class="p-card-header">
+              <div class="p-badge-row">
+                <span class="p-flagship data-flag">Data Pipeline</span>
+                <span class="p-year">2024</span>
+              </div>
+              <h3 class="p-title">
+                <a href="https://github.com/ziad17777/real-time-iot-data-pipeline" target="_blank">Real-Time IoT Data Pipeline</a>
+              </h3>
+              <p class="p-tagline">Automated Streaming Sensor Ingestion & Airflow Orchestration</p>
+            </div>
+
+            <div class="p-card-body">
+              <p class="p-desc">
+                End-to-end data engineering architecture designed to ingest high-frequency sensor telemetry. 
+                Automated through custom <strong>Apache Airflow DAGs</strong>, validating data quality thresholds, performing schema transformations, 
+                and persisting structured records into SQL Server and SQLite warehouses.
+              </p>
+
+              <div class="p-tech-stack">
+                <span class="stack-chip">Apache Airflow</span>
+                <span class="stack-chip">SQL Server</span>
+                <span class="stack-chip">ETL Pipelines</span>
+                <span class="stack-chip">Docker</span>
+                <span class="stack-chip">Pandas</span>
+                <span class="stack-chip">Python</span>
+              </div>
+            </div>
+
+            <div class="p-card-actions">
+              <a href="https://github.com/ziad17777/real-time-iot-data-pipeline" target="_blank" class="p-btn-code">
+                <i class="fab fa-github"></i>
+                <span>Explore Source Code ↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: Health-Fact -->
+          <div class="project-showcase-card reveal">
+            <div class="p-card-header">
+              <div class="p-badge-row">
+                <span class="p-flagship ml-flag">Embedded ML</span>
+                <span class="p-year">2024</span>
+              </div>
+              <h3 class="p-title">
+                <a href="https://github.com/ziad17777" target="_blank">Health-Fact Vital Monitoring</a>
+              </h3>
+              <p class="p-tagline">Real-Time Biometric Sensor Telemetry & Anomaly Classification</p>
+            </div>
+
+            <div class="p-card-body">
+              <p class="p-desc">
+                Collaborative embedded machine learning pipeline analyzing continuous vital sign sensor streams. 
+                Preprocessed real-time telemetry and trained supervised scikit-learn classification models to detect anomalous blood pressure fluctuations and glucose spikes.
+              </p>
+
+              <div class="p-tech-stack">
+                <span class="stack-chip">Embedded ML</span>
+                <span class="stack-chip">scikit-learn</span>
+                <span class="stack-chip">Biometric Sensors</span>
+                <span class="stack-chip">Python</span>
+                <span class="stack-chip">Data Cleaning</span>
+              </div>
+            </div>
+
+            <div class="p-card-actions">
+              <a href="https://github.com/ziad17777" target="_blank" class="p-btn-code">
+                <i class="fab fa-github"></i>
+                <span>GitHub Repository ↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4: PowerPulse -->
+          <div class="project-showcase-card reveal">
+            <div class="p-card-header">
+              <div class="p-badge-row">
+                <span class="p-flagship dl-flag">Deep Learning</span>
+                <span class="p-year">2024</span>
+              </div>
+              <h3 class="p-title">
+                <a href="https://github.com/ziad17777" target="_blank">PowerPulse Grid Forecasting</a>
+              </h3>
+              <p class="p-tagline">Time-Series Energy Demand Modeling with Weather Features</p>
+            </div>
+
+            <div class="p-card-body">
+              <p class="p-desc">
+                Predictive time-series machine learning model forecasting power consumption across multi-zone regional electrical distribution grids. 
+                Incorporated weather patterns, seasonal peak metrics, and historical load data to optimize grid capacity planning.
+              </p>
+
+              <div class="p-tech-stack">
+                <span class="stack-chip">Time Series</span>
+                <span class="stack-chip">Predictive ML</span>
+                <span class="stack-chip">scikit-learn</span>
+                <span class="stack-chip">Pandas</span>
+                <span class="stack-chip">NumPy</span>
+              </div>
+            </div>
+
+            <div class="p-card-actions">
+              <a href="https://github.com/ziad17777" target="_blank" class="p-btn-code">
+                <i class="fab fa-github"></i>
+                <span>GitHub Repository ↗</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Connect & Work Together</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            I am currently in <strong>Riyadh, Saudi Arabia</strong> and actively interviewing for AI Engineer, 
+            Data Pipeline, and Backend Software Engineer roles. Available for immediate start.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Direct Channels Box -->
+          <div class="contact-channels-box reveal">
+            
+            <a href="https://wa.me/966501885047" target="_blank" class="channel-card highlight-channel">
+              <div class="c-icon-circle whatsapp-circle">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div class="c-info">
+                <span class="c-type">WhatsApp (Fastest Response)</span>
+                <span class="c-value">+966 50 188 5047</span>
+              </div>
+              <div class="c-arrow"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="mailto:ziadelsayed177@gmail.com" class="channel-card">
+              <div class="c-icon-circle email-circle">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="c-info">
+                <span class="c-type">Email Address</span>
+                <span class="c-value">ziadelsayed177@gmail.com</span>
+              </div>
+              <div class="c-arrow"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/ziad-sayed-652365320/" target="_blank" class="channel-card">
+              <div class="c-icon-circle linkedin-circle">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="c-info">
+                <span class="c-type">LinkedIn Profile</span>
+                <span class="c-value">ziad-sayed-652365320</span>
+              </div>
+              <div class="c-arrow"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://github.com/ziad17777" target="_blank" class="channel-card">
+              <div class="c-icon-circle github-circle">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="c-info">
+                <span class="c-type">GitHub Profile</span>
+                <span class="c-value">github.com/ziad17777</span>
+              </div>
+              <div class="c-arrow"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="tel:+966501885047" class="channel-card">
+              <div class="c-icon-circle phone-circle">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="c-info">
+                <span class="c-type">Direct Phone Call</span>
+                <span class="c-value">+966 50 188 5047</span>
+              </div>
+              <div class="c-arrow"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+          </div>
+
+          <!-- Direct Message Form -->
+          <div class="contact-form-box reveal">
+            <h3 class="form-title">Send a Quick Message</h3>
+            <p class="form-sub">Feel free to send an inquiry or message directly to my inbox.</p>
+            
+            <form action="mailto:ziadelsayed177@gmail.com" method="post" enctype="text/plain" class="direct-form">
+              <div class="form-group">
+                <label for="formName">Your Name</label>
+                <input type="text" id="formName" name="name" placeholder="John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="formEmail">Your Email</label>
+                <input type="email" id="formEmail" name="email" placeholder="john@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="formMessage">Message</label>
+                <textarea id="formMessage" name="message" rows="5" placeholder="Hi Ziad, I came across your portfolio and would like to discuss an opportunity in Riyadh..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit">
+                <i class="fas fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Polished Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="footer-brand">Ziad El Sayed</span>
+        <span class="footer-tagline">AI & Software Engineer · Riyadh, Saudi Arabia</span>
+      </div>
+      <div class="footer-center">
+        <p>© 2026 Ziad El Sayed. Built with passion & precision.</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://wa.me/966501885047" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/ziad-sayed-652365320/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/ziad17777" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:ziadelsayed177@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
