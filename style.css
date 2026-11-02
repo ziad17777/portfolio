@@ -205,6 +205,9 @@ body{
 .about .content .col-left{
   position: relative;
   width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about .content .col-right{
@@ -215,30 +218,29 @@ body{
 .about .content .col-left .img-card{
   position: relative;
   width: 100%;
-  min-height: 480px;
-  border-radius: 16px;
+  max-width: 380px;
+  height: 455px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(58, 108, 244, 0.25), 0 5px 15px rgba(0, 0, 0, 0.2);
-  border: 3px solid rgba(58, 108, 244, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(58, 108, 244, 0.35);
+  background: #0b1120;
   transition: all 0.4s ease;
+  margin: 0 auto;
 }
 
 .about .content .col-left .img-card:hover{
   transform: translateY(-6px);
-  box-shadow: 0 25px 50px rgba(58, 108, 244, 0.35);
-  border-color: #3a6cf4;
+  box-shadow: 0 25px 50px rgba(58, 108, 244, 0.35), 0 0 0 2px #3a6cf4;
 }
 
 .about .content .col-left .img-card img{
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
-  border-radius: 14px;
-  transition: transform 0.5s ease;
+  object-position: center top;
+  border-radius: 16px;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
 .about .content .col-left .img-card:hover img{
